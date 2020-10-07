@@ -45,6 +45,7 @@ Live FM 98.6,http://167.114.246.249:8001/stream
 Love 106.5,http://server.insms.gr:45104/;stream
 Love Radio 97.5,http://loveradio.live24.gr:80/loveradio-1000
 MAD Radio 106.2,http://mediaserver.mad.tv:80/stream
+Magico Radio,https://i4.streams.ovh:2199/tunein/trellas-stream.pls
 Metropolis 95.5,http://metropolis.live24.gr:80/metropolis955thess
 More 103,http://eco.onestreaming.com:8041
 Music 89.2,http://ample-02.radiojar.com:80/k0hua7u1yk5tv?
