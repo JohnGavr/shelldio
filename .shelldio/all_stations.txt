@@ -52,6 +52,7 @@ Love Radio 97.5,http://loveradio.live24.gr:80/loveradio-1000
 MAD Radio 106.2,http://mediaserver.mad.tv:80/stream
 Magico Radio,https://i4.streams.ovh:2199/tunein/trellas-stream.pls
 Melody Patra,http://stream.melody888.gr:48500/melody.mp3
+Metro 89.2 Heraklion,https://stream.crete.ovh:8443/metro
 Metropolis 95.5,http://metropolis.live24.gr:80/metropolis955thess
 More 103,http://eco.onestreaming.com:8041
 Music 89.2,http://ample-02.radiojar.com:80/k0hua7u1yk5tv?
