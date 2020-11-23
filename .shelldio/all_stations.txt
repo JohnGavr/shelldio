@@ -20,6 +20,7 @@ Church of Greece 89.5,http://85.10.206.222:8002/;listen.pls
 Church of Piraeus 91.2,http://136.243.61.157:8310/stream
 City International 106.1,http://50.7.99.155:7519/stream/1/
 Cosmoradio 95.1,http://cosmoradio.gr:80/stream1
+D-Code 962.gr,http://s15.myradiostream.com:13980/;listen.pls
 Derti Radio ,http://derti.live24.gr:80/derty1000
 Dromos FM 89.8,http://dromos898.live24.gr:80/dromos898
 Easy 97.2,http://easy972.live24.gr:80/easy972
