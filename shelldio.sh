@@ -25,7 +25,7 @@ else
 fi
 
 ### Variable List
-version="v4.0.0  " # this space after the version num is intentional to fix UI
+version="v4.0.1  " # this space after the version num is intentional to fix UI
 
 all_stations="$HOME/.shelldio/all_stations.txt"
 my_stations="$HOME/.shelldio/my_stations.txt"
