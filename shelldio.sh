@@ -25,7 +25,7 @@ else
 fi
 
 ### Variable List
-version="v3.0.0  " # this space after the version num is intentional to fix UI
+version="v4.0.0  " # this space after the version num is intentional to fix UI
 
 all_stations="$HOME/.shelldio/all_stations.txt"
 my_stations="$HOME/.shelldio/my_stations.txt"
@@ -137,7 +137,7 @@ list_stations() {
 # Πληροφορίες που εμφανίζονται μετά την επιλογή του σταθμού
 info() {
 	welcome_screen
-	tput civis -- invisible # Εξαφάνιση cursor
+	tput civis -- invisible # Απόκρυψη cursor
 	echo -ne "  Σταθμός: [$selected_play]    Η ώρα είναι $(date +"%T")\n"
 	echo -ne " \n"
 	echo -ne "  Ακούτε: $stathmos_name\n"
