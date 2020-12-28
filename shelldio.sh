@@ -15,13 +15,13 @@
 
 ### Colors
 if [ -t 1 ]; then
-  RED=$(printf '\033[31m')
-  BLUE=$(printf '\033[34m')
-  RESET=$(printf '\033[m')
+	RED=$(printf '\033[31m')
+	BLUE=$(printf '\033[34m')
+	RESET=$(printf '\033[m')
 else
-  RED=""
-  BLUE=""
-  RESET=""
+	RED=""
+	BLUE=""
+	RESET=""
 fi
 
 ### Variable List
@@ -214,23 +214,26 @@ mpv_msg() {
 		echo "https://mpv.io/installation/"
 	fi
 }
-new_station () {
-	echo "Εμφάνιση λίστας σταθμών"
-	sleep 1
-	list_stations "$my_stations"
-	while true; do
-		read -rp "Δώσε όνομα νέου σταθμού  (Q/q για έξοδο): " station_name
-		if [[ $station_name = "q" ]] || [[ $station_name = "Q" ]]; then
-			echo "Έξοδος..."
-			exit 0
-		fi
-		read -rp "Δώσε url νέου σταθμού: " station_url
-		echo "$station_name,$station_url" >>"$my_stations"
-		echo " Προστέθηκε ο σταθμός $station_name."
-  
-	done
-	exit 0
-
+new_station() {
+	if [ ! -f "$HOME/.shelldio/my_stations.txt" ]; then
+		echo "Δεν έχει δημιουργηθεί το αρχείο my_stations."
+		echo "Για πληροφορίες τρέξε την παράμετρο --help."
+	else
+		echo "Εμφάνιση λίστας προσωπικών σταθμών"
+		sleep 1
+		list_stations "$my_stations"
+		while true; do
+			read -rp "Δώσε όνομα νέου σταθμού (ή δώσε Q/q για έξοδο): " station_name
+			if [[ $station_name = "q" ]] || [[ $station_name = "Q" ]]; then
+				echo "Έξοδος..."
+				exit 0
+			fi
+			read -rp "Δώσε url νέου σταθμού: " station_url
+			echo "$station_name,$station_url" >>"$my_stations"
+			echo " Προστέθηκε ο σταθμός $station_name."
+		done
+		exit 0
+	fi
 }
 
 reset_favorites() {
@@ -260,12 +263,24 @@ reset_favorites() {
 	exit 0
 }
 
+git_updater() {
+	if [[ "$(file /usr/local/bin/shelldio | grep -io "link")" == "link" ]]; then
+		printf "Το Shelldio έχει εγκατασταθεί σωστά μέσω git\n"
+		RETURN_TO_PWD=$(pwd)
+		cd "$(file /usr/local/bin/shelldio | awk -F'to ' '{print $2}' | awk -F"shelldio\\\.sh" '{print $1}')" || return
+		self_update
+		cd "$RETURN_TO_PWD" || exit 0
+	else
+		echo "To Shelldio δεν έχει εγκατασταθεί μέσω git clone οπότε δεν είναι διαθέσιμη η ενημέρωση μέσω shelldio -u"
+	fi
+}
+
 self_update() {
 	if ! command -v git &>/dev/null; then
 		return
 	fi
 
-	read -rp "Θέλεις να γίνει αναβάθμιση του shelldio; (y/n)" update_confirm
+	read -rp "Θέλεις να γίνει αναβάθμιση του shelldio; (y/n) : " update_confirm
 	case $update_confirm in
 	[Yy]*)
 		printf "${BLUE}%s${RESET}\n" "Γίνεται αναβάθμιση του shelldio"
@@ -274,7 +289,8 @@ self_update() {
 		else
 			printf "${RED}%s${RESET}\n" 'Κάποιο πρόβλημα παρουσιάστηκε κατά την αναβάθμιση. Δοκίμασε ξανά αργότερα'
 		fi
-		exit ;;
+		exit
+		;;
 	[Nn]*) exit ;;
 	*) echo "Παρακαλώ απαντήστε με y (ναι) ή n (όχι)" ;;
 	esac
@@ -350,7 +366,7 @@ while [ "$1" != "" ]; do
 		exit 0
 		;;
 	-u | --update)
-		self_update
+		git_updater
 		;;
 	*)
 		echo "Λάθος επιλογή."
