@@ -113,7 +113,7 @@ Zoo Radio 90.8,https://netradio.live24.gr/zoo908thess
 Θέμα Radio 104.6,http://stream.radiojar.com:80/cdk030dsvv5tv
 Καλαμαριά FM 101.7,http://sc.greekstream.net:80/;.mp3
 Κανάλι 1 – Δημοτική Ραδιοφωνία Πειραιά 90.4,https://netradio.live24.gr/kanali1peiraia
-Κοινωνικό Ραδιόφωνο Χανίων KPaX Radio,http://78.47.193.254:8006/stream
+Κοινωνικό Ραδιόφωνο Χανίων KPaX Radio,https://c32.radioboss.fm:18563/stream
 Κρήτη FM 87.5,http://s3.onweb.gr:8878
 Λαϊκός FM 87.6,https://netradio.live24.gr/laikos876
 Λάμψη FM 92.3,hls://lampsifmlive.mdc.akamaized.net/strmLampsi/userLampsi/playlist.m3u8
