@@ -119,6 +119,7 @@ Zoo Radio 90.8,https://netradio.live24.gr/zoo908thess
 Λάμψη FM 92.3,hls://lampsifmlive.mdc.akamaized.net/strmLampsi/userLampsi/playlist.m3u8
 Λυδία η Φιλιππησία 94.2,http://82.192.84.30:1086/stream
 Λύρα FM 91.4,http://172.93.237.106:8271/stream
+Ματζόρε Πανεπιστημίου Κρήτης (Ρέθυμνο) 89.1 FM,https://rs.radio.uoc.gr:8001/matzore_64.ogg
 Μελωδία 99.2,http://netradio
 Μέντα FM 88.0,http://ample-02.radiojar.com:80/menta
 Μεταδεύτερο FM,https://live.metadeftero.gr/stream
