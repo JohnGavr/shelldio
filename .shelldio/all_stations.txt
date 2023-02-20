@@ -73,6 +73,7 @@ Point Radio Λαικό,http://78.46.149.5:8029/stream
 Radio Galaxy 99,http://solid1.streamupsolutions.com:11074/stream
 Radio Gold @net,http://radiogold.live24.gr:80/radiogold
 Radio Hot Lips Athens,https://netradio.live24.gr/radiohotlips
+RAT FM Μεσογειακού Πανεπιστημίου Κρήτης (Χανιά),http://78.129.185.84:31467/
 Real FM 107.1,https://realfmthess.live24.gr/realthess
 Real FM 97.8,https://realfm.live24.gr/realfm
 Republic Radio ,https://netradio.live24.gr/republicthess
