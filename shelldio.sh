@@ -294,12 +294,12 @@ joker() {
 			fi
 		done
 
-		mpv "$stathmos_url" &>/dev/null &
+		mpv "$stathmos_url"
 
 		while true; do
 			trap '{ clear; echo  "Έξοδος..."; tput cnorm; exit 1; }' SIGINT
 			clear
-			joker_info
+			#joker_info
 			sleep 0
 			read -r -n1 -t1 input_play # Για μικρότερη αναμονή της read
 			if [[ $input_play = "q" ]] || [[ $input_play = "Q" ]]; then
@@ -562,7 +562,7 @@ while true; do
 		fi
 	done
 
-	mpv "$stathmos_url" &>/dev/null &
+	mpv "$stathmos_url"
 
 	while true; do
 		trap '{ clear; echo  "Έξοδος..."; tput cnorm; exit 1; }' SIGINT
